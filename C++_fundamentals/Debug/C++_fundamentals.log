@@ -1,4 +1,3 @@
-﻿  TextRPG.cpp
-C:\Users\junhyunpark\source\repos\C++_fundamentals\C++_fundamentals\TextRPG.cpp(343,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\junhyunpark\source\repos\C++_fundamentals\C++_fundamentals\TextRPG.cpp(344,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  namespace.cpp
+C:\Users\junhyunpark\source\repos\C++_fundamentals\C++_fundamentals\namespace.cpp(55,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
   C++_fundamentals.vcxproj -> C:\Users\junhyunpark\source\repos\C++_fundamentals\Debug\C++_fundamentals.exe

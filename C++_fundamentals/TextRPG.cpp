@@ -295,6 +295,9 @@ int main() {
 				switch (menu) {
 				case BATTLE_ATTACK:
 					//최소 5, 최대 10일때, 그 사이값이 나와야 함
+					// (10 - 5 + 1) + 5 = 11;
+					//10-5 = 5 + 1 = 6 -> 0~5사이의 값
+					//거기에 + 5하면 5 ~ 10 사이의 값
 					attack = rand() % (tPlayer.attackMax - tPlayer.attackMin + 1) + 
 						tPlayer.attackMin;
 					armor = rand() % (tMonster.armorMax - tMonster.armorMin + 1) +
