@@ -1,3 +1,2 @@
-﻿  namespace.cpp
-C:\Users\junhyunpark\source\repos\C++_fundamentals\C++_fundamentals\namespace.cpp(55,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+﻿  Reference.cpp
   C++_fundamentals.vcxproj -> C:\Users\junhyunpark\source\repos\C++_fundamentals\Debug\C++_fundamentals.exe

@@ -46,9 +46,9 @@ int val = 100;
 int simpleFunc(void) {
 	int val = 20;//지역변수
 	val += 3;
-	std::cout << val << '\n';
+	std::cout << val << '\n';//지역변수
 	::val += 3;
-	std::cout << ::val << '\n';
+	std::cout << ::val << '\n';//전역변수
 	return 0;
 }
 
