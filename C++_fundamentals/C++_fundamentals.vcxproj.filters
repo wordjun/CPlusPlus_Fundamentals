@@ -84,6 +84,12 @@
     <ClCompile Include="NewDelete.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="NewObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q02-4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header1.h">
