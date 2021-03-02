@@ -54,25 +54,28 @@ int main() {
 	manSenior.ShowNameCardInfo();
 	manAssist.ShowNameCardInfo();
 
+
+	//í•œê¸€ ê¹¨ì§í˜„ìƒ í…ŒìŠ¤íŠ¸
+	cout << "Checking for í•œê¸€ê¹¨ì§...\n";
 	return 0;
 }
 
 NameCard::NameCard(const char* _name, const char* _company, const char* _phoneNum, int _position) {
-	//¼º¸í
+	//ï¿½ï¿½ï¿½ï¿½
 	int len = strlen(_name) + 1;
 	name = new char[len];
 	strcpy(name, _name);
 
-	//È¸»çÀÌ¸§
+	//È¸ï¿½ï¿½ï¿½Ì¸ï¿½
 	len = strlen(_company) + 1;
 	company = new char[len];
 	strcpy(company, _company);
 
-	//ÀüÈ­¹øÈ£
+	//ï¿½ï¿½È­ï¿½ï¿½È£
 	len = strlen(_phoneNum) + 1;
 	phoneNum = new char[len];
 	strcpy(phoneNum, _phoneNum);
 
-	//Á÷±Ş
+	//ï¿½ï¿½ï¿½ï¿½
 	position = _position;
 }
