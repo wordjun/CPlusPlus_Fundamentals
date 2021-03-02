@@ -132,6 +132,12 @@
     <ClCompile Include="FruitSaleSim2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="PrivateConstructor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Q04-3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header1.h">
