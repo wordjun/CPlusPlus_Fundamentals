@@ -25,6 +25,7 @@ public:
 	//위 두개함수(getpay, showsalinfo)는 유도클래스에서 오버라이딩할수있도록 만들어진 틀일 뿐, 실제 실행되지 않는 함수임을 보다 명확히 명시할 수 있게 되었다.
 };//결론: Employee클래스처럼 하나이상의 멤버함수를 순수가상함수로 선언한 클래스를 추상클래스라고 부른다. 완전하지 않으며, 그래서 객체생성이 불가능한 클래스임을 뜻한다.
 
+
 class PermanentWorker : public Employee {
 private:
 	//char name[100];
@@ -90,6 +91,38 @@ public:
 	}
 };
 
+namespace RISK_LEVEL {
+	enum {
+		RISK_A = 30,
+		RISK_B = 20,
+		RISK_C = 10
+	};
+
+}
+
+class ForeignSalesWorker : public SalesWorker {
+private:
+	int riskLevel;
+public:
+	ForeignSalesWorker(const char* name, int money, double ratio, int risk)
+		:SalesWorker(name, money, ratio), riskLevel(risk){
+	}
+	
+	int GetRiskPay() const {
+		return (int)(SalesWorker::GetPay() * (riskLevel / 100.0));//double에 소수점 꼭 붙이기 **********
+	}
+	int GetPay() const {
+		return SalesWorker::GetPay() + GetRiskPay();
+	}
+	void ShowSalaryInfo() const {
+		ShowYourName();
+		cout << "salary: " << SalesWorker::GetPay() << '\n';
+		cout << "risk pay: " << GetRiskPay() << '\n';
+		cout << "sum: " << GetPay() << "\n\n";
+	}
+};
+
+
 class EmployeeHandler {
 private:
 	Employee* empList[50];
@@ -118,22 +151,35 @@ public:
 
 int main() {
 	EmployeeHandler handler;
-	//정규직
-	handler.AddEmployee(new PermanentWorker("PARK", 1500));
-	handler.AddEmployee(new PermanentWorker("LEE", 1700));
+	////정규직
+	//handler.AddEmployee(new PermanentWorker("PARK", 1500));
+	//handler.AddEmployee(new PermanentWorker("LEE", 1700));
 
-	//임시직
-	TemporaryWorker* albamon = new TemporaryWorker("CHOI", 400);
-	albamon->AddWorkTime(5);
-	handler.AddEmployee(albamon);
+	////임시직
+	//TemporaryWorker* albamon = new TemporaryWorker("CHOI", 400);
+	//albamon->AddWorkTime(5);
+	//handler.AddEmployee(albamon);
 
-	//영업직
-	SalesWorker* seller = new SalesWorker("KIM", 1000, 0.1);
-	seller->AddSalesResult(7000);
-	handler.AddEmployee(seller);
+	////영업직
+	//SalesWorker* seller = new SalesWorker("KIM", 1000, 0.1);
+	//seller->AddSalesResult(7000);
+	//handler.AddEmployee(seller);
+
+	//Q08-1
+	ForeignSalesWorker* fs1 = new ForeignSalesWorker("Hong", 1000, 0.1, RISK_LEVEL::RISK_A);
+	fs1->AddSalesResult(7000);
+	handler.AddEmployee(fs1);
+
+	ForeignSalesWorker* fs2 = new ForeignSalesWorker("Yoon", 1000, 0.1, RISK_LEVEL::RISK_B);
+	fs2->AddSalesResult(7000);
+	handler.AddEmployee(fs2);
+
+	ForeignSalesWorker* fs3 = new ForeignSalesWorker("Lee", 1000, 0.1, RISK_LEVEL::RISK_C);
+	fs3->AddSalesResult(7000);
+	handler.AddEmployee(fs3);
 
 	handler.ShowAllSalaryInfo();
 
-	handler.ShowTotalSalary();
+	//handler.ShowTotalSalary();
 	return 0;
 }
