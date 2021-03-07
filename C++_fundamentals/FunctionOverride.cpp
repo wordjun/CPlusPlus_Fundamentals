@@ -26,6 +26,7 @@ int main(void) {
 	Third* t = new Third();
 	Second* s = t;
 	First* f = s;
+	//위에 선언된 3개 포인터들 모두 결국 Third클래스의 포인터객체를 가리키고 있다.
 
 	f->MyFunc();//컴파일러는 f가 First형 포인터이니 이 포인터가 가리키는 객체(s)를 대상으로 First클래스에 정의된 Myfunc()함수는 무조건 호출 할 수 있다고 판단
 	s->MyFunc();//이 포인터는 Second형이므로 이 포인터가 가리키는 객체에는 First와 Second의 MyFunc함수가 오버라이딩 관계로 존재한다. 따라서 오버라이딩한 SEcond의 Myfunc함수를 호출한다

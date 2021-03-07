@@ -14,7 +14,7 @@
 //4. 가상함수의 prototype은 기본클래스와 파생클래스에서 동일함
 //5. 클래스는 가상소멸자를 가질 수 있으나 가상생성자는 가질 수 없음
 
-class Parent {
+class Parent {//기본클래스
 public:
 	virtual void v_print() {
 		std::cout << "parent(v_print)\n";
@@ -24,7 +24,7 @@ public:
 	}
 };
 
-class Child : public Parent {
+class Child : public Parent {//파생클래스
 public:
 	void v_print() {
 		std::cout << "child(v_print)\n";
@@ -40,9 +40,9 @@ void main() {
 	p1 = &c1;//포인터 p1은 객체 c1을 가리킴
 	//몸체(p1)는 Parent클래스이지만 실제객체(c1)는 Child클래스임
 
-	
+	//v_print함수는 virtual로 선언됐으므로, p1 포인터가 실제로 가리키는 객체인 Child클래스의 v_print함수를 호출하게 된다.
 	p1->v_print();//가상함수 호출
-	p1->print();//일반함수 호출
+	p1->print();//일반함수 호출(p1의 몸체인 Parent클래스의 print함수 호출)
 
 	//결과는 child, parent이다
 	//v_print()함수는 가상키워드로 선언되어 가상함수가 됐으며

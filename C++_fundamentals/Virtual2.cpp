@@ -15,11 +15,14 @@ public:
 
 class Child : public Parent {
 public:
+	void print1() {
+		std::cout << "Child print1()\n";
+	}
 	void print2() {
 		std::cout << "Child print2()\n";
 	}
-	void print3(int x) {
-		std::cout << "Child print3(), parameter " << x << '\n';
+	void print3() {
+		std::cout << "Child print3()\n";
 	}
 };
 
@@ -32,7 +35,7 @@ void main() {
 
 	p1->print1();//일반함수 호출
 	p1->print2();//가상함수 호출
-	p1->print3(7);
+	p1->print3(3);
 
 	//print1(): 일반함수이기 때문에 compile time에 결정남.=>Parent클래스의 print1()이 호출됨
 	//print2(): 가상함수이기때문에 runtime에 결정됨.=>Parent클래스이지만 가리키고있는 객체가 Child클래스이기때문에
@@ -40,5 +43,9 @@ void main() {
 
 	//print3(): 가상함수이지만 Child클래스에선 매개변수가 없는 함수를 호출했기 때문에 부모클래스인 Parent클래스의
 	//	print3가 호출됨.
+
 	//만약 매개변수가 주어지면 Child클래스의 print3가 호출되게 된다.
+
+
+	//중요: virtual은 포인터가 실제로 가리키고있는 대상(객체)의 클래스의 함수를 호출.
 }
