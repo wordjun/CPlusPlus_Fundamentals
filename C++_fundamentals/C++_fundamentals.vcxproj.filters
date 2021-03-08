@@ -180,6 +180,12 @@
     <ClCompile Include="PointConsoleOutput.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="virtual복습.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="reference복습.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header1.h">
