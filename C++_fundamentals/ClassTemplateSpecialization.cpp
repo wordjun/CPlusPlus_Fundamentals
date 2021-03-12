@@ -27,8 +27,8 @@ public:
 	}
 };
 
-template<>//char*í˜•ì— ëŒ€í•´ íŠ¹ìˆ˜í™”. ë¬¸ìžì—´ì„ ì €ìž¥í•˜ê¸° ìœ„í•¨, ì´ë¥¼ ëª©ì ìœ¼ë¡œ ë™ì í• ë‹¹ ê¸°ë°˜ì˜ ìƒì„±ìž/ì†Œë©¸ìžë¥¼ ë³„ë„ ì •ì˜.
-//ë°ì´í„°ì¶œë ¥ì—ì„  ë¬¸ìžì—´ ê¸¸ì´ì •ë³´ë„ ê°™ì´ ì¶œë ¥í•˜ë„ë¡ ì •ì˜
+template<>//char*Çü¿¡ ´ëÇØ Æ¯¼öÈ­. ¹®ÀÚ¿­À» ÀúÀåÇÏ±â À§ÇÔ, ÀÌ¸¦ ¸ñÀûÀ¸·Î µ¿ÀûÇÒ´ç ±â¹ÝÀÇ »ý¼ºÀÚ/¼Ò¸êÀÚ¸¦ º°µµ Á¤ÀÇ.
+//µ¥ÀÌÅÍÃâ·Â¿¡¼± ¹®ÀÚ¿­ ±æÀÌÁ¤º¸µµ °°ÀÌ Ãâ·ÂÇÏµµ·Ï Á¤ÀÇ
 class SimpleDataWrapper<char*> {
 private:
 	char* mdata;
@@ -46,8 +46,8 @@ public:
 	}
 };
 
-template<>//Point<int>í˜•ì— ëŒ€í•´ íŠ¹ìˆ˜í™”. ë¬¸ìžì—´ì„ ì €ìž¥í•˜ê¸° ìœ„í•¨, ì´ë¥¼ ëª©ì ìœ¼ë¡œ ë™ì í• ë‹¹ ê¸°ë°˜ì˜ ìƒì„±ìž/ì†Œë©¸ìžë¥¼ ë³„ë„ ì •ì˜.
-//ë°ì´í„°ì¶œë ¥ì—ì„  ë¬¸ìžì—´ ê¸¸ì´ì •ë³´ë„ ê°™ì´ ì¶œë ¥í•˜ë„ë¡ ì •ì˜
+template<>//Point<int>Çü¿¡ ´ëÇØ Æ¯¼öÈ­. ¹®ÀÚ¿­À» ÀúÀåÇÏ±â À§ÇÔ, ÀÌ¸¦ ¸ñÀûÀ¸·Î µ¿ÀûÇÒ´ç ±â¹ÝÀÇ »ý¼ºÀÚ/¼Ò¸êÀÚ¸¦ º°µµ Á¤ÀÇ.
+//µ¥ÀÌÅÍÃâ·Â¿¡¼± ¹®ÀÚ¿­ ±æÀÌÁ¤º¸µµ °°ÀÌ Ãâ·ÂÇÏµµ·Ï Á¤ÀÇ
 class SimpleDataWrapper<Point<int>> {
 private:
 	Point<int> mdata;
@@ -61,8 +61,8 @@ public:
 };
 
 int main() {
-	SimpleDataWrapper<int> iwrap(170);//intí˜•ì— ëŒ€í•´ì„  íŠ¹ìˆ˜í™”ê°€ ë¼ìžˆì§€ ì•Šìœ¼ë¯€ë¡œ ì»´íŒŒì¼ ì‹œ í…œí”Œë¦¿ í´ëž˜ìŠ¤ì¸
-	//SimpleDataWrapper<int>ê°€ ë§Œë“¤ì–´ì§€ê³  ì´ í´ëž˜ìŠ¤ë¥¼ ê¸°ë°˜ìœ¼ë¡œ ê°ì²´ìƒì„±
+	SimpleDataWrapper<int> iwrap(170);//intÇü¿¡ ´ëÇØ¼± Æ¯¼öÈ­°¡ µÅÀÖÁö ¾ÊÀ¸¹Ç·Î ÄÄÆÄÀÏ ½Ã ÅÛÇÃ¸´ Å¬·¡½ºÀÎ
+	//SimpleDataWrapper<int>°¡ ¸¸µé¾îÁö°í ÀÌ Å¬·¡½º¸¦ ±â¹ÝÀ¸·Î °´Ã¼»ý¼º
 	iwrap.ShowDataInfo();
 
 	SimpleDataWrapper<char*> cwrap("Hello world");

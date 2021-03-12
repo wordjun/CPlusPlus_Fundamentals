@@ -69,8 +69,8 @@ bool String::operator==(const String& s) {
 	return strcmp(str, s.str) ? false : true;
 }
 
-String String::operator+(const String& s) {//í”¼ì—°ì‚°ì(operand)ì˜ ê°’ì„ ë³€ê²½í•˜ëŠ” í•¨ìˆ˜ê°€ ì•„ë‹ˆë¯€ë¡œ constì„ ì–¸
-	char* tempstr = new char[len + s.len - 1];//ë¬¸ìì—´ì˜ ëì„ ì•Œë¦¬ëŠ” NULLì´ ë‘ ë²ˆ ë“¤ì–´ê°€ë¯€ë¡œ 1ì„ ë¹¼ì¤˜ì•¼ í•¨
+String String::operator+(const String& s) {//ÇÇ¿¬»êÀÚ(operand)ÀÇ °ªÀ» º¯°æÇÏ´Â ÇÔ¼ö°¡ ¾Æ´Ï¹Ç·Î const¼±¾ğ
+	char* tempstr = new char[len + s.len - 1];//¹®ÀÚ¿­ÀÇ ³¡À» ¾Ë¸®´Â NULLÀÌ µÎ ¹ø µé¾î°¡¹Ç·Î 1À» »©Áà¾ß ÇÔ
 	strcpy(tempstr, str);
 	strcat(tempstr, s.str);
 

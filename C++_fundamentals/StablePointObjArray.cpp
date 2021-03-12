@@ -57,7 +57,7 @@ public:
 //declared const so that the data stored inside the array cannot be manipulated in this function
 void ShowAlldata(const BoundCheckIntArray& ref) {
 	int len = ref.GetArrLen();
-	//const ì°¸ì¡°ìë¥¼ ì´ìš©í•œ ì—°ì‚°ì´ë‹ˆ, í•¨ìˆ˜ë’¤ì— constê°€ ë¶™ì€ operatorê°€ í˜¸ì¶œë¨
+	//const ÂüÁ¶ÀÚ¸¦ ÀÌ¿ëÇÑ ¿¬»êÀÌ´Ï, ÇÔ¼öµÚ¿¡ const°¡ ºÙÀº operator°¡ È£ÃâµÊ
 	for (int i = 0; i < len; i++)
 		cout << ref[i] << '\n';//compile error due to mismatch of array type
 }

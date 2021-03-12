@@ -23,9 +23,9 @@ public:
 		}
 		return arr[idx];
 	}
-	//í•¨ìˆ˜ì— constë¥¼ ë¶™ì˜€ì„ ë–„, ë°°ì—´ì„ ë©¤ë²„ë¡œ ì„ ì–¸í•˜ëŠ” ê²½ìš° ì €ì¥ìì²´ê°€ ë¶ˆê°€ëŠ¥í•´ì§
-	//constì˜ ì„ ì–¸ìœ ë¬´ë„ í•¨ìˆ˜ì˜¤ë²„ë¡œë”©ì˜ ì¡°ê±´ì— í•´ë‹¹í•œë‹¤.
-	//ì•„ë˜ í•¨ìˆ˜ëŠ” ìœ„ í•¨ìˆ˜ì™€ ì˜¤ë²„ë¡œë”© ê´€ê³„ë¥¼ ê°€ì§€ë©°, ì°¸ì¡°ê°’ì´ ì•„ë‹Œ ë°°ì—´ìš”ì†Œì˜ ê°’ì„ ë‹¨ìˆœíˆ ë°˜í™˜í•˜ëŠ” í˜•íƒœì´ë‹¤
+	//ÇÔ¼ö¿¡ const¸¦ ºÙ¿´À» ‹š, ¹è¿­À» ¸â¹ö·Î ¼±¾ğÇÏ´Â °æ¿ì ÀúÀåÀÚÃ¼°¡ ºÒ°¡´ÉÇØÁü
+	//constÀÇ ¼±¾ğÀ¯¹«µµ ÇÔ¼ö¿À¹ö·ÎµùÀÇ Á¶°Ç¿¡ ÇØ´çÇÑ´Ù.
+	//¾Æ·¡ ÇÔ¼ö´Â À§ ÇÔ¼ö¿Í ¿À¹ö·Îµù °ü°è¸¦ °¡Áö¸ç, ÂüÁ¶°ªÀÌ ¾Æ´Ñ ¹è¿­¿ä¼ÒÀÇ °ªÀ» ´Ü¼øÈ÷ ¹İÈ¯ÇÏ´Â ÇüÅÂÀÌ´Ù
 	int operator[](int idx) const{
 		if (idx < 0 || idx >= arrlen) {
 			//index out of range
@@ -44,7 +44,7 @@ public:
 //declared const so that the data stored inside the array cannot be manipulated in this function
 void ShowAlldata(const BoundCheckIntArray& ref) {
 	int len = ref.GetArrLen();
-	//const ì°¸ì¡°ìë¥¼ ì´ìš©í•œ ì—°ì‚°ì´ë‹ˆ, í•¨ìˆ˜ë’¤ì— constê°€ ë¶™ì€ operatorê°€ í˜¸ì¶œë¨
+	//const ÂüÁ¶ÀÚ¸¦ ÀÌ¿ëÇÑ ¿¬»êÀÌ´Ï, ÇÔ¼öµÚ¿¡ const°¡ ºÙÀº operator°¡ È£ÃâµÊ
 	for (int i = 0; i < len; i++)
 		cout << ref[i] << '\n';//compile error due to mismatch of array type
 }
@@ -53,7 +53,7 @@ int main() {
 	BoundCheckIntArray arr(5);
 
 	for (int i = 0; i < 5; i++) {
-		arr[i] = (i + 1) * 11;//constê°€ ë¶™ì§€ ì•Šì€ ì—°ì‚°ì í˜¸ì¶œ
+		arr[i] = (i + 1) * 11;//const°¡ ºÙÁö ¾ÊÀº ¿¬»êÀÚ È£Ãâ
 	}
 	ShowAlldata(arr);
 }

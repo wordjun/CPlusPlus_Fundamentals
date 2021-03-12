@@ -65,7 +65,7 @@ public:
 //declared const so that the data stored inside the array cannot be manipulated in this function
 void ShowAlldata(const BoundCheckPointPtrArray& ref) {
 	int len = ref.GetArrLen();
-	//const ì°¸ì¡°ìë¥¼ ì´ìš©í•œ ì—°ì‚°ì´ë‹ˆ, í•¨ìˆ˜ë’¤ì— constê°€ ë¶™ì€ operatorê°€ í˜¸ì¶œë¨
+	//const ÂüÁ¶ÀÚ¸¦ ÀÌ¿ëÇÑ ¿¬»êÀÌ´Ï, ÇÔ¼öµÚ¿¡ const°¡ ºÙÀº operator°¡ È£ÃâµÊ
 	for (int i = 0; i < len; i++)
 		cout << ref[i] << '\n';//compile error due to mismatch of array type
 }
@@ -73,13 +73,13 @@ void ShowAlldata(const BoundCheckPointPtrArray& ref) {
 int main() {
 	BoundCheckPointPtrArray arr(3);
 
-	//Pointê°ì²´ì˜ ì£¼ì†Œê°’ì„ ì €ì¥. ê°ì²´ì˜ ì£¼ì†Œê°’ ì €ì¥í•˜ëŠ” ê²½ìš°, ê¹Šì€ ë³µì‚¬ëƒ ì–•ì€ë³µì‚¬ëƒì˜ ë¬¸ì œëŠ” ì‹ ê²½X
+	//Point°´Ã¼ÀÇ ÁÖ¼Ò°ªÀ» ÀúÀå. °´Ã¼ÀÇ ÁÖ¼Ò°ª ÀúÀåÇÏ´Â °æ¿ì, ±íÀº º¹»ç³Ä ¾èÀºº¹»ç³ÄÀÇ ¹®Á¦´Â ½Å°æX
 	arr[0] = new Point(1, 2);
 	arr[1] = new Point(3, 4);
 	arr[2] = new Point(5, 9);
 
 	for (int i = 0; i < arr.GetArrLen(); i++)
-		cout << arr[i];//ê°’ì¶œë ¥(*)
+		cout << arr[i];//°ªÃâ·Â(*)
 
 	delete arr[0];
 	delete arr[1];

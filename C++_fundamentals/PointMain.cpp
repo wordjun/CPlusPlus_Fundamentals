@@ -2,11 +2,11 @@
 #include "PointTemplate.h"
 using namespace std;
 
-//PointTemplate.cppë¥¼ ì°¸ì¡°í•˜ì§€ ì•Šê¸° ë•Œë¬¸ì— í…œí”Œë¦¿í•¨ìˆ˜ì— ëŒ€í•œ ì •ë³´ê°€ ë¶€ì¡±í•˜ì—¬ ì»´íŒŒì¼ì—ëŸ¬ê°€ ë°œìƒ
-#include"PointTemplate.cpp"//ì†ŒìŠ¤íŒŒì¼ì„ ì°¸ì¡°í•˜ì—¬ í…œí”Œë¦¿ì— ëŒ€í•œ ëª¨ë“  ì •ë³´ë¥¼ í˜„ìž¬ ì†ŒìŠ¤íŒŒì¼ì— ì „ë‹¬í•´ì•¼ í•¨.
+//PointTemplate.cpp¸¦ ÂüÁ¶ÇÏÁö ¾Ê±â ¶§¹®¿¡ ÅÛÇÃ¸´ÇÔ¼ö¿¡ ´ëÇÑ Á¤º¸°¡ ºÎÁ·ÇÏ¿© ÄÄÆÄÀÏ¿¡·¯°¡ ¹ß»ý
+#include"PointTemplate.cpp"//¼Ò½ºÆÄÀÏÀ» ÂüÁ¶ÇÏ¿© ÅÛÇÃ¸´¿¡ ´ëÇÑ ¸ðµç Á¤º¸¸¦ ÇöÀç ¼Ò½ºÆÄÀÏ¿¡ Àü´ÞÇØ¾ß ÇÔ.
 
 int main(void) {
-	Point<int> p1(3, 5);//í…œí”Œë¦¿ í´ëž˜ìŠ¤ì˜ ê°ì²´ ìƒì„±ì‹œì—” ë°˜ë“œì‹œ ìžë£Œí˜• ì •ë³´ë¥¼ ëª…ì‹œí•´ì•¼ í•œë‹¤.
+	Point<int> p1(3, 5);//ÅÛÇÃ¸´ Å¬·¡½ºÀÇ °´Ã¼ »ý¼º½Ã¿£ ¹Ýµå½Ã ÀÚ·áÇü Á¤º¸¸¦ ¸í½ÃÇØ¾ß ÇÑ´Ù.
 	p1.showPos();
 
 	Point<double> p2(1.1, 7.4);

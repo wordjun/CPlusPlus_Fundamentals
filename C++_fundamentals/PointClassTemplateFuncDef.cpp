@@ -14,13 +14,13 @@ template<typename T>
 Point<T>::Point(T x, T y)
 	:xpos(x), ypos(y) {}
 
-template<typename T>//ëª…ì‹œí•˜ì§€ ì•Šìœ¼ë©´ "identifier "T" is undefined" ë¼ê³  ì—ëŸ¬ê°€ ëœ¬ë‹¤
+template<typename T>//¸í½ÃÇÏÁö ¾ÊÀ¸¸é "identifier "T" is undefined" ¶ó°í ¿¡·¯°¡ ¶á´Ù
 void Point<T>::showPos() const {
 	cout << xpos << ", " << ypos << '\n';
 }
 
 int main() {
-	Point<int> p1(3, 5);//í…œí”Œë¦¿ í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„±ì‹œì—” ë°˜ë“œì‹œ ìë£Œí˜• ì •ë³´ë¥¼ ëª…ì‹œí•´ì•¼ í•œë‹¤.
+	Point<int> p1(3, 5);//ÅÛÇÃ¸´ Å¬·¡½ºÀÇ °´Ã¼ »ı¼º½Ã¿£ ¹İµå½Ã ÀÚ·áÇü Á¤º¸¸¦ ¸í½ÃÇØ¾ß ÇÑ´Ù.
 	p1.showPos();
 
 	Point<double> p2(1.1, 7.4);

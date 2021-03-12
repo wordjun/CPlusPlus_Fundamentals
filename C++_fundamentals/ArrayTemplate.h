@@ -6,7 +6,7 @@
 #include<cstdlib>
 using namespace std;
 
-//ë°°ì—´í´ë˜ìŠ¤ í…œí”Œë¦¿í™”
+//¹è¿­Å¬·¡½º ÅÛÇÃ¸´È­
 template<typename T>
 class BoundCheckArray {
 private:
@@ -27,7 +27,7 @@ public:
 template<typename T>
 BoundCheckArray<T>::BoundCheckArray(int len) 
 :arrlen(len){
-	arr = new T[len];//Tí˜• ë°°ì—´ ìƒì„±
+	arr = new T[len];//TÇü ¹è¿­ »ı¼º
 }
 
 template<typename T>

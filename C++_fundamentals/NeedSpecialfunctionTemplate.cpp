@@ -6,8 +6,8 @@ T Max(T a, T b) {
 	return a > b ? a : b;
 }
 
-//í•¨ìˆ˜í…œí”Œë¦¿ Maxë¥¼ char*í˜•ì— ëŒ€í•´ íŠ¹ìˆ˜í™”: char*í˜• í•¨ìˆ˜ëŠ” ì´ë ‡ê²Œ ì •ì˜ê°€ ë˜ì–´ ìˆìœ¼ë‹ˆ,
-//char*í˜• í…œí”Œë¦¿ í•¨ìˆ˜ê°€ í•„ìš”í•œ ê²½ìš° ìƒˆë¡œ ìƒì„±í•˜ì§€ ë§ê³  ì´ í•¨ìˆ˜ë¥¼ ì“°ë¼ëŠ” ëœ»
+//ÇÔ¼öÅÛÇÃ¸´ Max¸¦ char*Çü¿¡ ´ëÇØ Æ¯¼öÈ­: char*Çü ÇÔ¼ö´Â ÀÌ·¸°Ô Á¤ÀÇ°¡ µÇ¾î ÀÖÀ¸´Ï,
+//char*Çü ÅÛÇÃ¸´ ÇÔ¼ö°¡ ÇÊ¿äÇÑ °æ¿ì »õ·Î »ı¼ºÇÏÁö ¸»°í ÀÌ ÇÔ¼ö¸¦ ¾²¶ó´Â ¶æ
 template<>
 char* Max<char*>(char* a, char* b) {
 	cout << "char* Max<char*>(char *a, char *b)\n";
@@ -15,7 +15,7 @@ char* Max<char*>(char* a, char* b) {
 }
 
 template<>
-const char* Max<const char*>(const char* a, const char* b) {//<>ëŠ” ìƒëµê°€ëŠ¥í•˜ì§€ë§Œ ê°€ê¸‰ì  ëª…ì‹œí•˜ëŠ”í¸ì´ ì¢‹ë‹¤
+const char* Max<const char*>(const char* a, const char* b) {//<>´Â »ı·«°¡´ÉÇÏÁö¸¸ °¡±ŞÀû ¸í½ÃÇÏ´ÂÆíÀÌ ÁÁ´Ù
 	cout << "const char* Max<char*>(const char *a, const char *b)\n";
 	return strlen(a) > strlen(b) ? a : b;
 }

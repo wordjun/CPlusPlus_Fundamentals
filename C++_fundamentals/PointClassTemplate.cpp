@@ -17,7 +17,7 @@ public:
 };
 
 int main() {
-	Point<int> p1(3, 5);//í…œí”Œë¦¿ í´ëž˜ìŠ¤ì˜ ê°ì²´ ìƒì„±ì‹œì—” ë°˜ë“œì‹œ ìžë£Œí˜• ì •ë³´ë¥¼ ëª…ì‹œí•´ì•¼ í•œë‹¤.
+	Point<int> p1(3, 5);//ÅÛÇÃ¸´ Å¬·¡½ºÀÇ °´Ã¼ »ý¼º½Ã¿£ ¹Ýµå½Ã ÀÚ·áÇü Á¤º¸¸¦ ¸í½ÃÇØ¾ß ÇÑ´Ù.
 	p1.showPos();
 
 	Point<double> p2(1.1, 7.4);
