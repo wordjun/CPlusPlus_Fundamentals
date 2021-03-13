@@ -264,6 +264,18 @@
     <ClCompile Include="FunctionTemplateStaticVar.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="HandlingExceptionUself.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="HandlingExceptionTryCatch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PassException.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DiffHandlingPosition.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header1.h">
